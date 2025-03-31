@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <TheCounter />
+    <router-view></router-view>
   </div>
 </template>
 
