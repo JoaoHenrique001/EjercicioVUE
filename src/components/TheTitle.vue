@@ -1,16 +1,12 @@
 <template>
-    <h2 class="title">{{ propTitulo }}</h2>
+    <h2 class="title">
+      <slot></slot>
+    </h2>
   </template>
   
   <script>
   export default {
-    // Declaracion del prop llamado titulo
-    props: {
-      propTitulo: {
-        type: String,
-        required: true // Indica que este prop es obligatorio
-      }
-    }
+    name: 'TheTitle'
   }
   </script>
   

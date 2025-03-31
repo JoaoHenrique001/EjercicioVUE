@@ -1,6 +1,8 @@
 <template>
   <div>
-    <TheTitle propTitulo="Mi título dinámico" />
+    <TheTitle>
+      Mi título dinámico
+    </TheTitle>
   </div>
 </template>
 
