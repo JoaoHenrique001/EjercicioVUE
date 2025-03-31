@@ -1,19 +1,18 @@
 <template>
   <div id="app">
-    <!-- Incluir el componente TheCounter -->
     <TheCounter />
   </div>
 </template>
 
-<script>
-import TheCounter from './components/TheCounter.vue';
+<script lang="ts">
+import TheCounter from './components/TheCounter.vue'
 
 export default {
   name: 'App',
   components: {
-    TheCounter
-  }
-};
+    TheCounter,
+  },
+}
 </script>
 
 <style>
