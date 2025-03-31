@@ -4,7 +4,7 @@
   
   <script>
   export default {
-    // Declaracion del prop llamado
+    // Declaracion del prop llamado titulo
     props: {
       propTitulo: {
         type: String,
