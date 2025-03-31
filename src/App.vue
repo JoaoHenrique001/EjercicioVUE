@@ -1,17 +1,26 @@
 <template>
-  <div>
-    <TheTitle>
-      Mi título dinámico
-    </TheTitle>
+  <div id="app">
+    <!-- Incluir el componente TheCounter -->
+    <TheCounter />
   </div>
 </template>
 
 <script>
-import TheTitle from './components/TheTitle.vue';
+import TheCounter from './components/TheCounter.vue';
 
 export default {
+  name: 'App',
   components: {
-    TheTitle
+    TheCounter
   }
 };
 </script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
