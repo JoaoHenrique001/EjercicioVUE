@@ -6,12 +6,14 @@
 </template>
 
 <script lang="ts">
-import TheCounter from './components/TheCounter.vue'
+import TheCounter from '../components/TheCounter.vue'
+import ParentComponent from '../components/ParentComponent.vue'
 
 export default {
   name: 'App',
   components: {
     TheCounter,
+    ParentComponent,
   },
 }
 </script>
