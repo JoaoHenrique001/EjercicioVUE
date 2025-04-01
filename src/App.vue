@@ -1,19 +1,18 @@
 <template>
   <div id="app">
     <TheCounter />
+    <ParentComponent />
     <router-view></router-view>
   </div>
 </template>
 
-<script lang="ts">
-import TheCounter from '../components/TheCounter.vue'
-import ParentComponent from '../components/ParentComponent.vue'
+<script lang="js">
+import ParentComponent from './ParentComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    TheCounter,
-    ParentComponent,
+    ParentComponent, // Asegúrate de importar y registrar el componente aquí
   },
 }
 </script>

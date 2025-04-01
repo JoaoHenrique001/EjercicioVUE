@@ -2,11 +2,11 @@
   <div>
     <h2>Componente Padre</h2>
     <p>{{ mensaje }}</p>
-    <ChildComponent @saludarPadre="recibirSaludo" />
+    <ChildComponent />
   </div>
 </template>
 
-<script lang="js">
+<script>
 import ChildComponent from './ChildComponent.vue'
 
 export default {
@@ -16,13 +16,14 @@ export default {
   },
   data() {
     return {
-      mensaje: 'Esperando saludo...',
+      mensaje: 'Hola desde el componente padre 👋',
     }
   },
-  methods: {
-    recibirSaludo(mensajeRecibido) {
-      this.mensaje = mensajeRecibido
-    },
-  },
+  provide() {
+    return {
+      // Proporcionar la variable al hijo
+      mensajePadre: this.mensaje,
+    }
+  }
 }
 </script>

@@ -1,16 +1,14 @@
 <template>
   <div>
-    <button @click="enviarSaludo">Saludar al Padre</button>
+    <h3>Componente Hijo</h3>
+    <p>Mensaje recibido: {{ mensajePadre }}</p>
   </div>
 </template>
 
-<script lang="js">
+<script>
 export default {
   name: 'ChildComponent',
-  methods: {
-    enviarSaludo() {
-      this.$emit('saludarPadre', 'Hola desde el componente hijo 👋')
-    },
-  },
+  // Recibimos la variable proporcionada por el padre
+  inject: ['mensajePadre'],
 }
 </script>
