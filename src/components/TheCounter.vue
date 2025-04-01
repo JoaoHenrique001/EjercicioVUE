@@ -18,28 +18,24 @@
 </template>
 
 <script>
+import { useCounter } from '../useCounter.ts' // Importamos el composable
 import TheTitle from './TheTitle.vue'
 
 export default {
+  name: 'TheCounter',
   components: {
-    TheTitle,
+    TheTitle,  // Solo registramos TheTitle
   },
-  data() {
+  setup() {
+    // Usamos el composable para obtener el contador y métodos
+    const { counter, increment, decrement } = useCounter()
+
     return {
-      // Contador inicializado en 0
-      counter: 0,
+      counter,
+      increment,
+      decrement,
     }
-  },
-  methods: {
-    // Método para incrementar el contador
-    increment() {
-      this.counter += 1
-    },
-    // Método para decrementar el contador
-    decrement() {
-      this.counter -= 1
-    },
-  },
+  }
 }
 </script>
 
