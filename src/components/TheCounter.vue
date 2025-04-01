@@ -3,7 +3,7 @@
     <!-- Usamos el componente TheTitle.vue para mostrar el título -->
     <TheTitle> Contador </TheTitle>
 
-    <div class="counter-display">
+    <div class="counter-display" :style="{color: counter === 10 ? 'green' : 'black'}">
       <!-- Mostrar el valor del contador -->
       <p>Contador: {{ counter }}</p>
     </div>
